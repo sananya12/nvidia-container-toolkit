@@ -72,7 +72,6 @@ func (l *nvmllib) newFullGPUDiscoverer(d device.Device) (discover.Discover, erro
 		dgpu.WithDevRoot(l.devRoot),
 		dgpu.WithLogger(l.logger),
 		dgpu.WithNVIDIACDIHookPath(l.nvidiaCDIHookPath),
-		dgpu.WithNvsandboxuitilsLib(l.nvsandboxutilslib),
 	)
 	if err != nil {
 		return nil, fmt.Errorf("failed to create device discoverer: %v", err)
